@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_01_05_082053) do
+ActiveRecord::Schema[8.1].define(version: 2026_01_05_085137) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
   create_table "departments", force: :cascade do |t|
     t.datetime "created_at", null: false
+    t.text "description"
     t.string "name"
     t.datetime "updated_at", null: false
   end
@@ -56,6 +57,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_01_05_082053) do
 
   create_table "leave_types", force: :cascade do |t|
     t.datetime "created_at", null: false
+    t.text "description"
     t.string "name"
     t.datetime "updated_at", null: false
   end
